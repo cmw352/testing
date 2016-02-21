@@ -143,7 +143,7 @@ function Render()
 	table.html("");
 	for (var i in top20){
 		if (typeof top20[i] !== 'function') {
-			table.append("<tr class='" + priorityClass(top20[i][7]) + " taskpage' taskid="+top20[i][0]+"><td>" + i + "</td>"
+			table.append("<tr class='" + priorityClass(top20[i][7]) + " taskpage' taskid="+top20[i][0]+"><td>" + (parseInt(i)+1) + "</td>"
 							+"<td><strong>" + top20[i][1] + "</strong></td>"
 							+"<td>" + priorityString(top20[i][7]) + "</td>"
 							+"<td>" + timeString(top20[i][3]) + "</td>"

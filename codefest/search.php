@@ -67,7 +67,7 @@ $(document).ready(function(){
 		{
 			for(var i = 0; i < enddata.length; i++)
 					
-				table.append("<tr class='" + priorityClass(enddata[i][7]) + " taskpage' taskid="+enddata[i][0]+"><td>" + i + "</td>"
+				table.append("<tr class='" + priorityClass(enddata[i][7]) + " taskpage' taskid="+enddata[i][0]+"><td>" + (i+1) + "</td>"
 								+"<td><strong>" + enddata[i][1] + "</strong></td>"
 								+"<td>" + priorityString(enddata[i][7]) + "</td>"
 								+"<td>" + timeString(enddata[i][3]) + "</td>"

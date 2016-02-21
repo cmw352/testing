@@ -269,7 +269,7 @@ function render()
 	if(enddata.length > 0)
 	{
 		for(var i = 0; i < enddata.length; i++)
-			table.append("<tr class='" + priorityClass(enddata[i][7]) + "'><td>" + i + "</td>"
+			table.append("<tr class='" + priorityClass(enddata[i][7]) + "'><td>" + (i+1) + "</td>"
 							+"<td><strong>" + enddata[i][1] + "</strong></td>"
 							+"<td>" + priorityString(enddata[i][7]) + "</td>"
 							+"<td>" + dateString(enddata[i][4]) + "</td>"

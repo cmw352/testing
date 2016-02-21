@@ -38,7 +38,7 @@ $(document).ready(function(){
 		table.html("");
 		for(var i = 0; i < top20.length; i++)
 				
-			table.append("<tr class='" + priorityClass(top20[i][7]) + " taskpage' taskid="+top20[i][0]+"><td>" + i + "</td>"
+			table.append("<tr class='" + priorityClass(top20[i][7]) + " taskpage' taskid="+top20[i][0]+"><td>" + (i+1) + "</td>"
 							+"<td><strong>" + top20[i][1] + "</strong></td>"
 							+"<td>" + priorityString(top20[i][7]) + "</td>"
 							+"<td>" + timeString(top20[i][3]) + "</td>"
