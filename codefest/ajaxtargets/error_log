@@ -1,0 +1,17 @@
+[20-Feb-2016 21:46:03 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
+[20-Feb-2016 23:28:54 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
+[21-Feb-2016 00:17:30 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
+[21-Feb-2016 01:48:14 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
+[21-Feb-2016 01:48:17 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
+[21-Feb-2016 07:35:23 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
+[21-Feb-2016 07:35:44 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php:41) in /home2/jeffers/public_html/codefest/ajaxtargets/login_ajax.php on line 44
+[21-Feb-2016 07:35:44 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php:41) in /home2/jeffers/public_html/codefest/ajaxtargets/login_ajax.php on line 45
+[21-Feb-2016 08:15:01 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php on line 114
+[21-Feb-2016 08:15:04 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php on line 114
+[21-Feb-2016 08:15:09 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php on line 114
+[21-Feb-2016 08:15:11 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php on line 114
+[21-Feb-2016 08:15:22 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php on line 114
+[21-Feb-2016 08:15:24 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php on line 114
+[21-Feb-2016 09:19:11 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
+[21-Feb-2016 09:19:27 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php:42) in /home2/jeffers/public_html/codefest/ajaxtargets/login_ajax.php on line 44
+[21-Feb-2016 09:19:27 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php:42) in /home2/jeffers/public_html/codefest/ajaxtargets/login_ajax.php on line 45
