@@ -136,10 +136,10 @@ function priorityClass(i)
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-		<li><a href="index.php">Home</a></li>
+		<li <?php if($_SESSION['activetab'] == "home"){echo  'class="active"';}?> ><a href="index.php">Home</a></li>
         <li <?php if($_SESSION['activetab'] == "gettask"){echo  'class="active"';}?> ><a href="getTask.php">I'm Bored<span class="sr-only">(current)</span></a></li>
         <li <?php if($_SESSION['activetab'] == "maketask"){echo  'class="active"';}?>><a href="addTask.php">Create Task</a></li>
-		<li><a href="CalendarTest.php">Calendar</a></li>
+		<li <?php if($_SESSION['activetab'] == "calendar"){echo  'class="active"';}?>  ><a href="CalendarTest.php">Calendar</a></li>
 		<li><a href="about.php">About Us</a><li>
       </ul>
       <form class="navbar-form navbar-left" role="search" action="search.php" method="GET">

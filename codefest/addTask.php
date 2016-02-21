@@ -62,6 +62,7 @@ $(function(){
 				success:function(data){
 					$("#postcreator").show();
 					$("#addform").hide();
+					loadall();
 				}
 			});
 		}
@@ -195,6 +196,10 @@ find the task they're searching for. -->
 <script>
 var enddata = new Array();
 var alldata;
+
+function loadall(){
+enddata = new Array();
+alldata;
 $.ajax({
 	url:"ajaxtargets/get_tasks_ajax.php",
 	method:"POST",
@@ -209,6 +214,8 @@ $.ajax({
 		Search("a b c d e f g h i j k l m n o p q r s t u v w x y z");
 	}
 });
+}
+loadall();
 
 function Search(searchString)
 {

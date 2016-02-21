@@ -15,3 +15,5 @@
 [21-Feb-2016 09:19:11 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
 [21-Feb-2016 09:19:27 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php:42) in /home2/jeffers/public_html/codefest/ajaxtargets/login_ajax.php on line 44
 [21-Feb-2016 09:19:27 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/jeffers/public_html/codefest/phpscript/sqlconnect.php:42) in /home2/jeffers/public_html/codefest/ajaxtargets/login_ajax.php on line 45
+[21-Feb-2016 09:51:59 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6
+[21-Feb-2016 09:54:38 America/Chicago] PHP Fatal error:  Call to undefined function Generate_Cookie() in /home2/jeffers/public_html/codefest/ajaxtargets/logout_ajax.php on line 6

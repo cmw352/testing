@@ -23,7 +23,7 @@ body{
 </style>
 <div class="container">
 <div class="col-lg-8 col-lg-offset-2">
-<img src="images/CalLogo.jpg" width = "150" height ="95"; align ="left"; />
+<a href="http://nathanhyer.com/codefest/index.php"><img src="images/CalLogo.jpg" width = "150" height ="95"; align ="left"; /></a>
 <p align="right"><a href="http://nathanhyer.com/codefest/login.php" class="btn btn-primary btn-sm">Login/Register</a></p>
 
 <h1>About Us</h1>

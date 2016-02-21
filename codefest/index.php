@@ -1,5 +1,5 @@
 <?php session_start();
-$_SESSION['activetab'] = "none";
+$_SESSION['activetab'] = "home";
 
 include "incl/login_require.php";
 include "incl/header.php";?>

@@ -57,16 +57,21 @@ $(document).ready(function(){
 		total = hours + mins;
 		top20 = new Array();
 		
-		for(var i = 0; i < allData.length && top20.length < 20; i++)
+		if($("#timein").val() == "")
 		{
-			if(parseInt(allData[i][3]) <= total)
-			{
-				top20.push(allData[i]);
+			total = 9999;
+		}
+		
+		for (var i in allData){
+			if (typeof allData[i] !== 'function') {
+				if(parseInt(allData[i][3]) <= total)
+				{
+					top20.push(allData[i]);
+				}
 			}
 		}
 		Render();
 	});
-	
 	$.ajax({
 		url:"ajaxtargets/get_tasks_ajax.php",
 		method:"POST",
@@ -76,45 +81,53 @@ $(document).ready(function(){
 				},
 		success:function(data)
 		{
-			allData =data;
-			top20 = new Array();
-			for(var i = 0; i < allData.length; i++)
+			allData = new Array();
+			for(var i = 0; i < data.length; i++)
 			{
-				//allData[i].push((parseInt(allData[i][7])+1) * (parseInt(allData[i][3])) / (daysToCompletion(allData[i][4])));
-				allData[i].push(0);
-				$.ajax({
-					url:"ajaxtargets/getdata.php",
-					method:"POST",
-					dataType:"JSON",
-					data:{	operation:"prereqs",
-							eid:allData[i][0],
-							row:i
-							},
-					success:function(data)
-					{
-						var i = data[data.length - 1];
-						for(var j = 0; j < data.length - 1; j++)
+				allData[data[i][0]] = data[i];
+			}
+			top20 = new Array();
+			
+			for (var i in allData){
+				if (typeof allData[i] !== 'function') {
+					allData[i].push(0);
+					$.ajax({
+						url:"ajaxtargets/getdata.php",
+						method:"POST",
+						dataType:"JSON",
+						data:{	operation:"prereqs",
+								eid:allData[i][0],
+								row:i
+								},
+						success:function(data)
 						{
-							allData[i][allData[i].length - 1] += (parseInt(data[j].Priority)+1) * (parseInt(data[j].RequiredTime)) / (daysToCompletion(data[j].Deadline));
-						}
-						top20 = new Array();
-						allData.sort(function(a,b){
-							return b[b.length - 1] - a[a.length - 1];
-						});
-						for(var i = 0; i < allData.length && top20.length < 20; i++)
-						{
-							if(parseInt(allData[i][3]) <= total)
+							var score = (parseInt(data[0].Priority)+1) * (parseInt(data[0].RequiredTime)) / (daysToCompletion(data[0].Deadline));
+							for(var j = 0; j < data.length - 1; j++)
 							{
-								top20.push(allData[i]);
+								allData[parseInt(data[j].ID)][8] += score;
 							}
+						
+							top20 = new Array();
+							for (var i in allData){
+								if (typeof allData[i] !== 'function') {
+									if(parseInt(allData[i][3]) <= total)
+									{
+										top20.push(allData[i]);
+									}
+								}
+							}
+							top20.sort(function(a,b){
+										return b[b.length - 1] - a[a.length - 1];
+									});
+							Render();
 						}
-						Render();
-					}
-				});
+					});
+				}
 			}
 		}
 	});
 });
+
 
 function daysToCompletion(timestamp)
 {
@@ -128,14 +141,15 @@ function Render()
 {
 	var table = $("#tappend");
 	table.html("");
-	for(var i = 0; i < top20.length; i++)
-	{
-		table.append("<tr class='" + priorityClass(top20[i][7]) + " taskpage' taskid="+top20[i][0]+"><td>" + i + "</td>"
+	for (var i in top20){
+		if (typeof top20[i] !== 'function') {
+			table.append("<tr class='" + priorityClass(top20[i][7]) + " taskpage' taskid="+top20[i][0]+"><td>" + i + "</td>"
 							+"<td><strong>" + top20[i][1] + "</strong></td>"
 							+"<td>" + priorityString(top20[i][7]) + "</td>"
 							+"<td>" + timeString(top20[i][3]) + "</td>"
 							+"<td>" + dateString(top20[i][4]) + "</td>"
 							+"</tr>");
+		}
 	}
 	$(".taskpage").click(function(){
 		TaskPage($(this).attr("taskid"));

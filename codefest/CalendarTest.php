@@ -1,5 +1,5 @@
 <?php session_start();
-$_SESSION['activetab'] = "none";
+$_SESSION['activetab'] = "calendar";
 include "incl/header.php"; ?>
 
 <style>
